@@ -10,7 +10,11 @@
   </head>
   <body>
     <div ng-controller="ToDoController as controller">
-      {{controller.todo}}
+      <ul>
+        <li ng-repeat="todo in controller.todos">
+          {{todo.task}}: {{todo.completed ? "completed" : "not completed"}}
+        </li>
+      </ul>
     </div>
   </body>
 </html>
