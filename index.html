@@ -15,6 +15,10 @@
           {{todo.task}}: {{todo.completed ? "completed" : "not completed"}}
         </li>
       </ul>
+      <input type="text" ng-model="todoText">
+
+      <button ng-click="controller.addToDo(todoText);">Add task</button>
+      <button ng-click="controller.removeToDo();">Remove Last task</button>
     </div>
   </body>
 </html>
